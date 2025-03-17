@@ -41,6 +41,7 @@ $result = $conn->query($sql);
         <th>Phone</th>
         <th>Email</th>
         <th>Country</th>
+        <th>Edit</th>
     </tr>
 
     <?php
@@ -54,6 +55,7 @@ $result = $conn->query($sql);
                     
                     <td>{$row['email']}</td>
                     <td>{$row['country']}</td>
+                    <td><a href='edit.php?id={$row['user_id']}'>Edit</a></td>
                   </tr>";
         }
     } else {
