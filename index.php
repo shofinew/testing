@@ -26,9 +26,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($conn->query($sql) === TRUE) {
         echo "নতুন রেকর্ড সফলভাবে ইনসার্ট হয়েছে!";
+        header("Location: view.php"); // Redirect to the main page
+        exit;
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
+    
 }
 
 // কানেকশন বন্ধ করা
