@@ -45,7 +45,7 @@ $conn->close();
 
 <h2>Sign Up</h2>
 <form method="post" action="index.php">
-    নাম: <input type="text" name="name" required><br><br>
+    name: <input type="text" name="name" required><br><br>
 
     gender: <input type="text" name="gender" required><br><br>
 
@@ -53,7 +53,7 @@ $conn->close();
    
     Phone: <input type="tel" name="phone" required><br><br>
 
-    ইমেইল: <input type="email" name="email" required><br><br>
+    email: <input type="email" name="email" required><br><br>
 
     country: <input type="text" name="country" required><br><br>
 

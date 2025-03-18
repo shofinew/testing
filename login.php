@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows > 0) {
         // Fetch user data
         $row = $result->fetch_assoc();
-        echo "User Name: " . $row["user_name"] . "<br>";
+        echo "Name: " . $row["user_name"] . "<br>";
         echo "Gender: " . $row["gender"] . "<br>";
         echo "Phone Number: " . $row["phone_number"] . "<br>";
         echo "Country: " . $row["country"] . "<br>";
@@ -36,3 +36,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 $conn->close();
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>profile</title>
+</head>
+<body>
+      
+</body>
+</html>
