@@ -3,12 +3,7 @@ include "connect.php";
 ?>
 
 
-
-
-
-
 <?php
-
 
 // 2. ফর্ম থেকে ডাটা নেওয়া এবং ইনসার্ট করা
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -17,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = $_POST['phone'];
     $email = $_POST['email'];
       $country = $_POST['country'];
-      $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+      $password = ($_POST['password']);
     
 
     // SQL ইনসার্ট কুয়েরি
@@ -43,11 +38,12 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>index</title>
 </head>
 <body>
 
-<h2>ইউজার ইনসার্ট ফর্ম</h2>
+<h2>Sign Up</h2>
 <form method="post" action="index.php">
     নাম: <input type="text" name="name" required><br><br>
 
@@ -67,8 +63,10 @@ $conn->close();
 
     
     
-    <input type="submit" value="সাবমিট">
+    <input type="submit" value="submit">
+    
 </form>
+
 
 </body>
 </html>
