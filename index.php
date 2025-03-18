@@ -9,6 +9,7 @@ include "connect.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
       $gender = $_POST['gender'];
+        $date_of_birth = $_POST['date_of_birth'];
     $phone = $_POST['phone'];
     $email = $_POST['email'];
       $country = $_POST['country'];
@@ -16,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
 
     // SQL ইনসার্ট কুয়েরি
-    $sql = "INSERT INTO user (user_name, gender, phone_number, email, country, password) VALUES ('$name', '$gender', '$phone', '$email', '$country', '$password')";
+    $sql = "INSERT INTO user (user_name, gender, date_of_birth, phone_number, email, country, password) VALUES ('$name', '$gender', '$date_of_birth', '$phone', '$email', '$country', '$password')";
 
 
     if ($conn->query($sql) === TRUE) {
@@ -48,6 +49,8 @@ $conn->close();
     name: <input type="text" name="name" required><br><br>
 
     gender: <input type="text" name="gender" required><br><br>
+
+    BoD: <input type="date" name="date_of_birth" required><br><br>
 
     
    
