@@ -10,6 +10,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+?>
+<?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
@@ -35,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->close();
 }
 $conn->close();
-?>
+?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,6 +46,9 @@ $conn->close();
       <title>profile</title>
 </head>
 <body>
-      
+<div id="date">00.00</div>
+<div class="clock" id="liveClock">00:00:00</div>
+
 </body>
+    <script src="script.js"></script>
 </html>

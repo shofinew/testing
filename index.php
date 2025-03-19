@@ -48,7 +48,11 @@ $conn->close();
 <form method="post" action="index.php">
     name: <input type="text" name="name" required><br><br>
 
-    gender: <input type="text" name="gender" required><br><br>
+    gender: <select  type="text" name="gender" required>
+    <option value="male">Male</option> 
+    <option value="female">Female</option>
+    <option value="others">Others</option>
+            </select><br><br>
 
     BoD: <input type="date" name="date_of_birth" required><br><br>
 
@@ -58,7 +62,12 @@ $conn->close();
 
     email: <input type="email" name="email" required><br><br>
 
-    country: <input type="text" name="country" required><br><br>
+    country: <select type="text" name="country" required>
+                    <option value="Bangladesh">Bangladesh</option> 
+                    <option value="Australia">Australia</option> 
+    
+    
+            </select><br><br>
 
     password: <input type="password" name="password" required><br><br>
 
