@@ -1,16 +1,24 @@
 <?php
-// Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "witdb";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include "connect.php";
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>profile</title>
+</head>
+<body>
+    <div id="date">00.00</div>
+    <div class="clock" id="liveClock">00:00:00</div>
+    <hr>
+
+</body>
+    <script src="script.js"></script>
+</html>
+
+
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -38,17 +46,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 $conn->close();
 ?> 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>profile</title>
-</head>
-<body>
-<div id="date">00.00</div>
-<div class="clock" id="liveClock">00:00:00</div>
 
-</body>
-    <script src="script.js"></script>
-</html>
+
+

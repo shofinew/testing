@@ -13,7 +13,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = $_POST['phone'];
     $email = $_POST['email'];
       $country = $_POST['country'];
-      $password = ($_POST['password']);
+      $password =  $_POST['password'];
+
     
 
     // SQL ইনসার্ট কুয়েরি
