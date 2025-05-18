@@ -1,14 +1,39 @@
- function showPage(id) {
-      const pages = document.querySelectorAll('.page');
-      pages.forEach(page => page.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
+  const inputbox = document.getElementById('input-box');
+
+  const listcontainer = document.getElementById('list-container');
+
+  function addtask(){
+    if(inputbox.value === ''){
+      alert("you are must write something!");
+    }else{
+      let li = document.createElement("li");
+      li.innerHTML = inputbox.value;
+      listcontainer.appendChild(li);
+      let span = document.createElement("span");
+      span.innerHTML = "\u00d7";
+      li.appendChild(span);
     }
- // Date and Time
-    function updateDateTime() {
-      const now = new Date();
-      const date = now.toLocaleDateString();
-      const time = now.toLocaleTimeString();
-      document.getElementById('datetime').textContent = `${date} ${time}`;
+    inputbox.value = '';
+    savedata();
+  }
+
+  listcontainer.addEventListener("click", function(e){
+    if(e.target.tagName === "LI"){
+      // e.target.classList.toggle("checked");
+      e.target.classList.toggle("checked");
+      savedata();
     }
-    setInterval(updateDateTime, 1000);
-    updateDateTime();
+    else if(e.target.tagName === "SPAN"){
+      e.target.parentElement.remove();
+      savedata();
+    }
+  }, false);
+
+  function savedata(){
+    localStorage.setItem("data", listcontainer.innerHTML);
+  }
+
+  function showtask(){
+    listcontainer.innerHTML = localStorage.getItem('data')
+  }
+  showtask();

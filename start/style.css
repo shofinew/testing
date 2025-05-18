@@ -1,81 +1,96 @@
- * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: sans-serif;
-    }
+*{
+  margin: 0;
+  padding: 0;
+}
 
-    body {
-      display: flex;
-      min-height: 100vh;
-      background-color: #f5f5f5;
-    }
+body{
+  background: #00002546;
+  width: 100%;
+  min-height: 100vh ;
+  padding: 10px;
+}
+.to-do-app{
+  width: 100%;
+  max-width: 540px;
+  background-color: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
 
-    /* Sidebar */
-    .sidebar {
-      width: 220px;
-      background-color: #2c3e50;
-      color: white;
-      padding-top: 60px;
-      position: fixed;
-      height: 100%;
-    }
+.to-do-app h2{
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 
-    .sidebar a {
-      display: block;
-      padding: 15px 20px;
-      color: white;
-      text-decoration: none;
-      transition: 0.3s;
-    }
+}
 
-    .sidebar a:hover {
-      background-color: #34495e;
-    }
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #7ca0da;
+  border-radius: 5px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
 
-    /* Topbar */
-    .topbar {
-      height: 60px;
-      width: 100%;
-      background-color: #1abc9c;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 20px;
-      position: fixed;
-      top: 0;
-      left: 220px;
-    }
+input{
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+}
 
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-    }
+button{
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #ff5945;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
 
-    .datetime {
-      font-size: 14px;
-      color: #ecf0f1;
-    }
+ul li{
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
 
-    .search-box input {
-      padding: 5px 10px;
-      border-radius: 4px;
-      border: none;
-      outline: none;
-    }
+ul li::before{
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 5px;
 
-    /* Main content */
-    .main {
-      margin-left: 220px;
-      margin-top: 60px;
-      padding: 20px;
-    }
+}
 
-    .page {
-      display: none;
-    }
+ul li.checked{
+  color: #555;
+  text-decoration: line-through;
+}
 
-    .page.active {
-      display: block;
-    }
+ul li span{
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+}
+
+ul li span:hover{
+  background-color: red;
+  border-radius: 5px;
+  color: #fff;
+}
