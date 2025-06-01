@@ -119,8 +119,12 @@ nav {
         color: red;
       }
 
-      hr{
+      hr {
             margin: 10px 50px;
             border: 0;
             border-top: 1px solid #ccc;
+      }
+
+      li{
+            cursor: pointer;
       }
