@@ -113,3 +113,14 @@ nav {
       font-size: 16px;
       outline: none;
     }
+
+    /* SearchResult box  */
+      .SearchResult {
+        color: red;
+      }
+
+      hr{
+            margin: 10px 50px;
+            border: 0;
+            border-top: 1px solid #ccc;
+      }
