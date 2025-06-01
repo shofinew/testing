@@ -20,7 +20,8 @@ function App() {
       {/* ✅ এখানে রাউটিং হবে */}
 
       <div className="container">
-        <h1>আমি এখানে এখানে একটা প্রজেক্ট করব, সাথেই থাক</h1>
+        
+        <h2>এখানে আরো কিছু ব্যবহার করা যাবে</h2>
 
         {/* ✅ রাউটিং */}
         <Routes>
@@ -32,6 +33,8 @@ function App() {
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </div>
+
+      
     </BrowserRouter>
   );
 }
