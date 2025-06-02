@@ -3,7 +3,8 @@ function Search() {
   return (
     <div>
       <h1>Search Page</h1>
-      <p>This is the search page.</p>
+      <label htmlFor="search">Search by id</label><br/>
+      <input type='search'></input>
     </div>
   );
 }
