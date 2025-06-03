@@ -1,0 +1,144 @@
+*{
+      margin: 0;
+      padding: 0;
+      font-family: "Plus Jakarta Sans", sans-serif;
+            }
+body{
+      min-height: 100vh;
+      background-image: linear-gradient(#FFFFFF, #EBDCFF) ;
+            }
+#banner{
+      margin: 100px auto 120px auto;
+      border-radius: 40px;
+      width: 87.5%;
+      border: 2px solid #872BFF10;
+      padding: 20px 30px;
+      background-color: white;
+      background-image: url(img/tour-mama-main/images/hero-bg.png);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+.banner_content{
+      width: 50%;
+}
+.banner_content h1{
+      font-size: 70px;
+      font-weight: bold;
+      color: #872BFF;
+      margin-bottom: 20px;
+}
+.banner_content h1 span{
+      color: #f411cf ;
+}
+.banner_content p{
+      font-weight: medium;
+      font-size: 18px;
+      color: #a8a8a8;
+}
+.banner_content *{
+      margin-bottom: 20px;
+}
+.banner_image img{
+      width: 600px;
+}
+
+.btn{
+      background-color: #872BFF;
+      border-radius: 30px;
+      padding: 16px 32px;
+      color: white;
+      cursor: pointer;
+      margin: 0 20px;
+}
+.btn_white{
+      border: 2px solid #872BFF;
+      border-radius: 30px;
+      padding: 16px 32px;
+      cursor: pointer;
+      margin: 0 20px;
+}
+.service, #story, #country{
+      width: 87.5%;
+      margin: 0 auto 120px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+}
+.heading_content{
+      width: 100%;
+      text-align: center;
+}
+.heading_content h4{
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 24px;
+      letter-spacing: 10px;
+      color: #f411cf;
+      font-weight: bold;
+      margin-bottom: 20px;
+}
+.heading_content h2{
+      font-size: 44px;
+      margin-bottom: 30px;
+}
+.service_card_container{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+}
+.service_card{
+      width: 350px;
+      background-color: white;
+      border-radius: 30px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+}
+.service_card img{
+      margin-bottom: 30px;
+}
+.service_card h3{
+      font-size: 28px;
+      font-weight: bold;
+      color: #872BFF;
+      margin-bottom: 20px;
+}
+.service_card p{
+      font-size: 16px;
+      color: #a8a8a8;
+      margin-bottom: 20px;
+}
+.story_card_container {
+      padding: 20px;
+      border-radius: 24px;
+      display: flex;
+}
+.story_content{
+      margin-bottom: 30px;
+      margin-left: 20px;
+}
+.story_content h1, img, p, button{
+      margin-bottom: 20px;
+}
+.btn1{
+      background-color: #872BFF;
+      border-radius: 30px;
+      padding: 16px 32px;
+      color: white;
+      cursor: pointer;
+      
+}
+#country_card_container{
+      display: flex;
+      background-color: white;
+      padding: 40px;
+      gap: 20px;
+      border-radius: 30px;
+      flex-wrap: wrap;
+      margin: 10px;
+}
